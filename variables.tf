@@ -62,6 +62,7 @@ variable "tags" {
 # --------------------------------------------------------------------------------------------------
 variable "audit_log_bucket_name" {
   description = "The name of the S3 bucket to store various audit logs."
+  default = ""
 }
 
 variable "audit_log_bucket_custom_policy_json" {
@@ -144,6 +145,7 @@ variable "support_iam_role_policy_name" {
 variable "support_iam_role_principal_arns" {
   type        = list(any)
   description = "List of ARNs of the IAM principal elements by which the support role could be assumed."
+  default = "[]"
 }
 
 variable "max_password_age" {
